@@ -1,0 +1,47 @@
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#E3F2FD', 'primaryTextColor': '#1A1A1A', 'primaryBorderColor': '#1565C0', 'lineColor': '#1565C0', 'secondaryColor': '#FFF3E0', 'tertiaryColor': '#E8F5E9'}, 'flowchart': {'curve': 'basis', 'padding': 20}}}%%
+
+flowchart LR
+    subgraph INGEST["F1: Ingestion"]
+        A["Voice Recordings\n(AI-agent + Human)"]
+    end
+
+    subgraph DETECT["F2: AI Detection"]
+        B["AE Detection Engine\nScans transcript\nClassifies severity\nAssigns confidence"]
+    end
+
+    subgraph TRIAGE["F3: Triage Queue"]
+        C["Sorted by severity\n+ SLA countdown\nReviewer assignment"]
+    end
+
+    subgraph DETAIL["F4: Case Detail"]
+        D["Flagged transcript\nAudio playback\nPre-filled MedWatch\nModel reasoning"]
+    end
+
+    subgraph DECISION["Reviewer Decision"]
+        E{{"Confirm\nor\nDismiss?"}}
+    end
+
+    subgraph CONFIRM_PATH["Confirmed AE"]
+        F["F5: Audit Export\nMedWatch package\nPDF / CSV / JSON"]
+        G["F6: Studio\nRemediation\nworkflow"]
+    end
+
+    subgraph DISMISS_PATH["Dismissed"]
+        H["Logged with\nrationale\nFeeds model\nretraining"]
+    end
+
+    A -->|"Near real-time"| B
+    B -->|"< 30 min P95"| C
+    C --> D
+    D --> E
+    E -->|"Confirm"| F
+    F --> G
+    E -->|"Dismiss"| H
+
+    style INGEST fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
+    style DETECT fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
+    style TRIAGE fill:#FFF3E0,stroke:#E65100,stroke-width:2px
+    style DETAIL fill:#FFF3E0,stroke:#E65100,stroke-width:2px
+    style DECISION fill:#FFF9C4,stroke:#F9A825,stroke-width:2px
+    style CONFIRM_PATH fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px
+    style DISMISS_PATH fill:#FFEBEE,stroke:#C62828,stroke-width:2px

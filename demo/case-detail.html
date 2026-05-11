@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinitus Lens — Case Detail</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="lens-shell">
+
+  <!-- Sidebar -->
+  <aside class="lens-sidebar">
+    <div class="lens-brand">
+      <span class="lens-brand-text">infinitus</span>
+      <span class="lens-brand-badge">Lens</span>
+    </div>
+
+    <nav class="lens-nav-section">
+      <a href="index.html" class="lens-nav-item">
+        <span class="nav-icon">&#9634;</span> Dashboard
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9636;</span> Billing
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9776;</span> Documentation
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9881;</span> Settings
+      </a>
+    </nav>
+
+    <div class="lens-nav-divider"></div>
+
+    <div class="lens-nav-label">Agents</div>
+    <nav class="lens-nav-section">
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9889;</span> Agent Studio
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#8644;</span> Agent Connectors
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9673;</span> Observability
+      </a>
+    </nav>
+
+    <div class="lens-nav-divider"></div>
+
+    <div class="lens-nav-label">Intelligence</div>
+    <nav class="lens-nav-section">
+      <a href="#" class="lens-nav-item lens-nav-parent">
+        <span class="nav-icon">&#9678;</span> Lens
+        <span class="lens-nav-chevron">&#9662;</span>
+      </a>
+      <div class="lens-nav-children">
+        <a href="index.html" class="lens-nav-child">Dashboards</a>
+        <a href="#" class="lens-nav-child">Tasks</a>
+        <a href="#" class="lens-nav-child">Insights</a>
+        <a href="#" class="lens-nav-child">Analytics</a>
+        <a href="#" class="lens-nav-child">Coaching</a>
+        <a href="#" class="lens-nav-child">Optimizer</a>
+        <a href="#" class="lens-nav-child">Foundations</a>
+      </div>
+    </nav>
+
+    <div class="lens-nav-divider"></div>
+
+    <div class="lens-nav-label">PharCovAI</div>
+    <nav class="lens-nav-section">
+      <a href="triage-queue.html" class="lens-nav-item active">
+        <span class="nav-icon">&#9888;</span> AE Triage Queue
+        <span class="lens-nav-badge">3</span>
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9745;</span> SOP Scoring
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9638;</span> Compliance Reports
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9744;</span> Audit Log
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Body -->
+  <div class="lens-body">
+
+    <!-- Header -->
+    <header class="lens-header">
+      <div>
+        <div class="lens-breadcrumb">
+          <a href="index.html">Dashboard</a>
+          <span>&#8250;</span>
+          <a href="triage-queue.html">AE Triage Queue</a>
+          <span>&#8250;</span>
+          <span>Case Detail</span>
+        </div>
+        <h1 class="lens-header-title">Case Detail</h1>
+      </div>
+      <div class="lens-header-actions">
+        <div class="lens-user">
+          <div class="lens-user-info">
+            <div class="lens-user-name">Sarah Chen</div>
+            <div class="lens-user-role">PV Analyst</div>
+          </div>
+          <div class="lens-user-avatar">SC</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="lens-content" style="padding: 0;">
+
+      <!-- Back Link -->
+      <a href="triage-queue.html" class="back-link">&larr; Back to Triage Queue</a>
+
+      <!-- Case Summary (Sticky) -->
+      <div class="case-summary" id="case-summary"></div>
+
+      <!-- Two-Panel Layout -->
+      <div class="detail-layout">
+
+        <!-- Left Panel -->
+        <div class="detail-left">
+
+          <!-- Transcript Viewer -->
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Conversation Transcript</span>
+              <button class="btn btn-sm btn-secondary" onclick="jumpToFlagged()">&#9873; Jump to flagged segment</button>
+            </div>
+            <div class="transcript" id="transcript">
+              <div class="transcript-body" id="transcript-body"></div>
+            </div>
+          </div>
+
+          <!-- Audio Player -->
+          <div class="audio-player">
+            <button class="audio-play-btn" onclick="togglePlay()" id="play-btn">&#9654;</button>
+            <div class="audio-progress">
+              <div class="audio-progress-fill" id="audio-fill"></div>
+            </div>
+            <span class="audio-time">02:34 / 12:47</span>
+            <a class="audio-jump" onclick="jumpToDetection()">&#9654; Jump to 00:24</a>
+          </div>
+
+          <!-- Decision Actions -->
+          <div class="card" id="decision-card">
+            <div class="decision-actions" id="decision-actions">
+              <button class="btn btn-primary btn-lg" onclick="showModal('confirm')">&#10003; Confirm AE</button>
+              <button class="btn btn-danger btn-lg" onclick="showModal('dismiss')">&#10005; Dismiss</button>
+              <button class="btn btn-warning btn-lg" onclick="showModal('escalate')">&#8679; Escalate</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="detail-right">
+
+          <!-- MedWatch Fields -->
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">MedWatch Fields</span>
+              <span class="text-xs text-secondary">AI-extracted &middot; Editable</span>
+            </div>
+            <div class="card-body">
+              <div class="medwatch-form" id="medwatch-form"></div>
+            </div>
+          </div>
+
+          <!-- AI Reasoning -->
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">AI Model Reasoning</span>
+            </div>
+            <div class="card-body" id="reasoning-body"></div>
+          </div>
+
+          <!-- Audit Trail -->
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Audit Trail</span>
+            </div>
+            <div class="card-body">
+              <div class="audit-trail" id="audit-trail"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Modal Overlay -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <span class="modal-title" id="modal-title"></span>
+      <button class="modal-close" onclick="hideModal()">&times;</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-footer" id="modal-footer"></div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/case-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinitus Lens — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="lens-shell">
+
+  <!-- Sidebar -->
+  <aside class="lens-sidebar">
+    <div class="lens-brand">
+      <span class="lens-brand-text">infinitus</span>
+      <span class="lens-brand-badge">Lens</span>
+    </div>
+
+    <nav class="lens-nav-section">
+      <a href="index.html" class="lens-nav-item">
+        <span class="nav-icon">&#9634;</span> Dashboard
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9636;</span> Billing
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9776;</span> Documentation
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9881;</span> Settings
+      </a>
+    </nav>
+
+    <div class="lens-nav-divider"></div>
+
+    <div class="lens-nav-label">Agents</div>
+    <nav class="lens-nav-section">
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9889;</span> Agent Studio
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#8644;</span> Agent Connectors
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9673;</span> Observability
+      </a>
+    </nav>
+
+    <div class="lens-nav-divider"></div>
+
+    <div class="lens-nav-label">Intelligence</div>
+    <nav class="lens-nav-section">
+      <a href="#" class="lens-nav-item lens-nav-parent">
+        <span class="nav-icon">&#9678;</span> Lens
+        <span class="lens-nav-chevron">&#9662;</span>
+      </a>
+      <div class="lens-nav-children">
+        <a href="index.html" class="lens-nav-child active">Dashboards</a>
+        <a href="#" class="lens-nav-child">Tasks</a>
+        <a href="#" class="lens-nav-child">Insights</a>
+        <a href="#" class="lens-nav-child">Analytics</a>
+        <a href="#" class="lens-nav-child">Coaching</a>
+        <a href="#" class="lens-nav-child">Optimizer</a>
+        <a href="#" class="lens-nav-child">Foundations</a>
+      </div>
+    </nav>
+
+    <div class="lens-nav-divider"></div>
+
+    <div class="lens-nav-label">PharCovAI</div>
+    <nav class="lens-nav-section">
+      <a href="triage-queue.html" class="lens-nav-item">
+        <span class="nav-icon">&#9888;</span> AE Triage Queue
+        <span class="lens-nav-badge">3</span>
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9745;</span> SOP Scoring
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9638;</span> Compliance Reports
+      </a>
+      <a href="#" class="lens-nav-item">
+        <span class="nav-icon">&#9744;</span> Audit Log
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Body -->
+  <div class="lens-body">
+
+    <!-- Header -->
+    <header class="lens-header">
+      <div>
+        <h1 class="lens-header-title">Lens Dashboard</h1>
+        <p class="lens-header-subtitle">Organization-wide insights and analytics</p>
+      </div>
+      <div class="lens-header-actions">
+        <span class="lens-filter-pill active">Pharma</span>
+        <span class="lens-filter-pill">All task types &#9662;</span>
+        <span class="lens-filter-pill">All agents &#9662;</span>
+        <span class="lens-filter-pill">Past 7 days &#9662;</span>
+        <button class="btn btn-secondary btn-sm">&#8599; Export report</button>
+        <div class="lens-user">
+          <div class="lens-user-info">
+            <div class="lens-user-name">Sarah Chen</div>
+            <div class="lens-user-role">PV Analyst</div>
+          </div>
+          <div class="lens-user-avatar">SC</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="lens-content">
+
+      <!-- Stats Row 1 -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Total Agents</div>
+          <div class="stat-value">37</div>
+          <div class="stat-detail">Across 3 types</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Interactions (% days)</div>
+          <div class="stat-value">7,388</div>
+          <div class="stat-change positive">&#9650; 12% vs last month</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Call Sentiment Distribution</div>
+          <div class="stat-value" style="color: var(--color-success);">76% good</div>
+          <div class="stat-detail">18% average, 6% poor</div>
+        </div>
+      </div>
+
+      <!-- Stats Row 2 -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Avg Opp Score</div>
+          <div class="stat-value">87.5%</div>
+          <div class="stat-change positive">&#9650; +3.4 vs last month</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">CSAT Score</div>
+          <div class="stat-value">8.6 / 10</div>
+          <div class="stat-change positive">&#9650; +0.2 vs last month</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Frustration Rate</div>
+          <div class="stat-value">8.4%</div>
+          <div class="stat-change positive">&#9660; -1.2% vs last month</div>
+        </div>
+      </div>
+
+      <!-- Recommended Actions -->
+      <div class="card mt-4">
+        <div class="card-header">
+          <div>
+            <span class="card-title">Recommended Actions</span>
+            <div class="text-sm text-secondary" style="margin-top: 4px;">AI-identified items that require your attention</div>
+          </div>
+        </div>
+        <div class="card-body" style="padding: 0;">
+
+          <!-- Action 1: SOP Compliance -->
+          <div class="action-item">
+            <div class="action-dot critical"></div>
+            <div class="action-content">
+              <div class="action-title">Review SOP Compliance For Specialty Pharmacy Team</div>
+              <div class="action-desc">SOP compliance for Specialty Pharmacy dropped to 87.5% &mdash; below the 90% threshold. Prior authorization verification steps are being skipped on 23% of calls.</div>
+              <span class="action-priority high">High priority</span>
+            </div>
+            <div class="action-buttons">
+              <label class="action-check"><input type="checkbox"> Mark complete</label>
+              <button class="btn btn-sm btn-secondary">Review SOP &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Action 2: PharCovAI AE Cases -->
+          <div class="action-item">
+            <div class="action-dot critical"></div>
+            <div class="action-content">
+              <div class="action-title">3 Critical AE Cases Require Immediate Review</div>
+              <div class="action-desc">PharCovAI flagged 3 critical adverse event cases. 1 case (PC-2026-0002, Pfizer &mdash; Eliquis) has been waiting over 5 hours with no reviewer assigned.</div>
+              <span class="action-priority high">High priority</span>
+            </div>
+            <div class="action-buttons">
+              <label class="action-check"><input type="checkbox"> Mark complete</label>
+              <a href="triage-queue.html" class="btn btn-sm btn-primary">Open Triage Queue &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Action 3: Call Transfer -->
+          <div class="action-item">
+            <div class="action-dot medium"></div>
+            <div class="action-content">
+              <div class="action-title">Update Call Transfer Handling Guidelines</div>
+              <div class="action-desc">Call Transfer Handling scored 8.1 on avg &mdash; the second lowest metric. 94% of transfers lack proper warm handoff context, leading to patient frustration.</div>
+              <span class="action-priority medium">Medium priority</span>
+            </div>
+            <div class="action-buttons">
+              <label class="action-check"><input type="checkbox"> Mark complete</label>
+              <button class="btn btn-sm btn-secondary">Update guidelines &rarr;</button>
+            </div>
+          </div>
+
+          <div class="action-show-more">Show 2 more &#9662;</div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

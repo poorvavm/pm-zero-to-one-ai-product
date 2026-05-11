@@ -1,0 +1,32 @@
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#E3F2FD', 'primaryTextColor': '#1A1A1A', 'primaryBorderColor': '#1565C0', 'doneColor': '#C8E6C9', 'critBorderColor': '#C62828', 'critBkgColor': '#FFCDD2', 'activeBackgroundColor': '#FFF3E0', 'activeBorderColor': '#E65100', 'taskTextColor': '#1A1A1A', 'sectionBkgColor': '#FAFAFA'}, 'gantt': {'fontSize': 14, 'barHeight': 30, 'topPadding': 50, 'sectionFontSize': 14}}}%%
+
+gantt
+    title 90-Day Pilot Timeline — PharCovAI
+    dateFormat YYYY-MM-DD
+    axisFormat Week %W
+
+    section Legal & Compliance
+    BAA / DPA Negotiation            :legal1, 2026-01-05, 4w
+    BAA Completion                   :milestone, m1, after legal1, 0d
+    Calibration Before Live AE Review :legal2, 2026-02-16, 1w
+
+    section Discovery & UX
+    User Research & UX Design        :disc1, 2026-01-05, 4w
+    Discovery Freeze                 :milestone, m2, 2026-02-16, 0d
+
+    section Engineering
+    Core Platform Development        :eng1, 2026-01-05, 9w
+    Engineering Hardening            :eng2, 2026-02-23, 2w
+
+    section Customer Onboarding
+    Customer Onboarding              :onb1, 2026-01-19, 3w
+
+    section Calibration & Validation
+    Model Calibration & Validation   :cal1, 2026-02-02, 3w
+
+    section Pilot Operations
+    Live Pilot Operations            :active, pilot1, 2026-02-09, 5w
+
+    section Launch & Decision
+    Soft Launch                      :launch1, 2026-03-09, 1w
+    Week 12 Go / No-Go Decision      :crit, milestone, m3, 2026-03-16, 0d

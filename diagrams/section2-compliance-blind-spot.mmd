@@ -1,0 +1,41 @@
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#E3F2FD', 'primaryTextColor': '#1A1A1A', 'primaryBorderColor': '#1565C0', 'lineColor': '#1565C0', 'secondaryColor': '#FFF3E0', 'tertiaryColor': '#FFEBEE'}}}%%
+
+flowchart TB
+    subgraph BLIND["THE COMPLIANCE BLIND SPOT"]
+        direction TB
+
+        subgraph SCALE["Scale of What's Missed"]
+            A["Tens of thousands of\ninteractions / month"]
+            B["1 reviewer per\n500–1,000 calls"]
+            C["95–99%\nUnreviewed"]
+            A --> B --> C
+        end
+
+        subgraph CHAIN["The Failure Chain"]
+            D["1. Patient mentions\nsymptom or side effect"]
+            E["2. Agent misses signal\nor logs inconsistently"]
+            F["3. Interaction enters\nQA backlog — never sampled"]
+            G["4. AE goes unreported\n— breaches 15-day window"]
+            H["5. Gap discovered\nweeks later in audit"]
+            D --> E --> F --> G --> H
+        end
+
+        subgraph GAPS["Compounding Gaps"]
+            I["AI Governance Vacuum\nNo monitoring, no audit trail,\nno feedback loop"]
+            J["Fragmented Systems\n4–6 disconnected platforms\n2–4 weeks per audit cycle"]
+            K["No Healthcare-Native\nSolution Exists\nGeneric tools lack HIPAA,\nMedDRA, MedWatch support"]
+        end
+
+        C --> D
+        H --> I
+        I --> J
+        J --> K
+    end
+
+    style BLIND fill:#FAFAFA,stroke:#1565C0,stroke-width:2px
+    style SCALE fill:#E3F2FD,stroke:#1565C0,stroke-width:1px
+    style CHAIN fill:#FFF3E0,stroke:#E65100,stroke-width:1px
+    style GAPS fill:#FFEBEE,stroke:#C62828,stroke-width:1px
+    style C fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#B71C1C
+    style H fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#B71C1C
+    style K fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#B71C1C

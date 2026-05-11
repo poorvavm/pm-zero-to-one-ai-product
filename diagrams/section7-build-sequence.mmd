@@ -1,0 +1,25 @@
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#E3F2FD', 'primaryTextColor': '#1A1A1A', 'primaryBorderColor': '#1565C0', 'doneColor': '#C8E6C9', 'critBorderColor': '#C62828', 'critBkgColor': '#FFCDD2', 'activeBackgroundColor': '#FFF3E0', 'activeBorderColor': '#E65100', 'taskTextColor': '#1A1A1A'}, 'gantt': {'fontSize': 14, 'barHeight': 30, 'topPadding': 50, 'sectionFontSize': 14}}}%%
+
+gantt
+    title MVP Build Sequence — Feature Dependencies (Weeks 1–12)
+    dateFormat YYYY-MM-DD
+    axisFormat Week %W
+
+    section Foundation
+    F1 Voice Call Ingestion [M effort, Low risk]     :f1, 2026-01-05, 3w
+
+    section Core Detection
+    F2 AE Detection Engine [L effort, HIGH risk]     :crit, f2, after f1, 5w
+
+    section Reviewer Surfaces
+    F3 Case Queue [M effort, Med risk]               :f3, after f2, 3w
+    F4 Case Detail View [M effort, Low risk]         :f4, after f2, 3w
+
+    section Output & Integration
+    F5 Audit-Ready Export [S effort, Med risk]        :f5, after f3, 2w
+    F6 Studio Integration [S effort, Low risk]        :f6, after f3, 2w
+
+    section Milestones
+    Data flowing                                      :milestone, m1, 2026-01-26, 0d
+    Model calibration starts                          :milestone, m2, 2026-02-02, 0d
+    Feature-complete                                  :milestone, m3, 2026-03-02, 0d
