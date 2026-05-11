@@ -14,6 +14,7 @@
    - [The Failure Chain](#the-failure-chain)
    - [The AI Governance Vacuum](#the-ai-governance-vacuum)
    - [Fragmented Audit Landscape](#fragmented-audit-landscape)
+   - [No Healthcare-Native Solution Exists](#no-healthcare-native-solution-exists)
 3. [From 5% to 100%: The Product Vision](#3-from-5-to-100-the-product-vision)
    - [The Shift](#the-shift)
    - [Data Sources](#data-sources)
@@ -25,37 +26,40 @@
    - [Why Now — Four Converging Signals](#why-now--four-converging-signals)
    - [The Infinitus Moat](#the-infinitus-moat)
    - [Why Not Someone Else?](#why-not-someone-else)
-5. [Target Users & Personas](#5-target-users--personas)
+5. [Product Scope & Constraints](#5-product-scope--constraints)
+6. [Target Users & Personas](#6-target-users--personas)
    - [Economic Buyer](#economic-buyer)
    - [Primary Users](#primary-users)
-6. [MVP Feature Prioritization](#6-mvp-feature-prioritization)
+7. [MVP Feature Prioritization](#7-mvp-feature-prioritization)
    - [V1 — MVP Features](#v1--mvp-features)
    - [V1.5 Features](#v15-features)
    - [V2 Features](#v2-features)
    - [Deferred / Long-Term Features](#deferred--long-term-features)
-7. [Product Experience](#7-product-experience)
+8. [Product Experience](#8-product-experience)
    - [Primary Workflow](#primary-workflow)
    - [Core Product Surfaces](#core-product-surfaces)
-8. [From Contract to First Case Review](#8-from-contract-to-first-case-review)
+9. [From Contract to First Case Review](#9-from-contract-to-first-case-review)
    - [Why Pharma Onboarding Is Different](#why-pharma-onboarding-is-different)
    - [Onboarding Phases](#onboarding-phases)
    - [The First Value Moment](#the-first-value-moment)
-9. [Pilot Launch Plan](#9-pilot-launch-plan)
-   - [Pilot Design](#pilot-design)
-   - [Parallel Execution Tracks](#parallel-execution-tracks)
-10. [How We'll Know It's Working](#10-how-well-know-its-working)
+10. [Pilot Launch Plan](#10-pilot-launch-plan)
+    - [Pilot Objectives](#pilot-objectives)
+    - [Pilot Design](#pilot-design)
+    - [Parallel Execution Tracks](#parallel-execution-tracks)
+11. [How We'll Know It's Working](#11-how-well-know-its-working)
     - [Safety Metrics](#safety-metrics)
     - [Product Quality Metrics](#product-quality-metrics)
     - [Business Metrics](#business-metrics)
-11. [The Week 12 Decision](#11-the-week-12-decision)
+12. [The Week 12 Decision](#12-the-week-12-decision)
     - [Go Criteria](#go-criteria)
     - [Conditional Go — Retry with Improvements](#conditional-go--retry-with-improvements)
     - [No-Go Triggers](#no-go-triggers)
     - [What Happens After Each Outcome](#what-happens-after-each-outcome)
-12. [The Case for Building This](#12-the-case-for-building-this)
+13. [The Case for Building This](#13-the-case-for-building-this)
     - [The Strategic Argument](#the-strategic-argument)
     - [The Cost of Inaction](#the-cost-of-inaction)
     - [The Post-Pilot Roadmap](#the-post-pilot-roadmap)
+    - [24-Month North Star](#24-month-north-star)
     - [The Ask](#the-ask)
 
 ---
@@ -112,6 +116,17 @@ When an AI agent deviates from protocol, there is no automated alert, no audit t
 
 Compliance teams preparing for FDA inspections or internal audits typically reconcile data across 4–6 disconnected systems — telephony platforms, CRM tools, email archives, QA spreadsheets, and PV case management databases. This manual reconciliation can consume 2–4 weeks of preparation per audit cycle, pulling senior staff away from active compliance monitoring.
 
+### No Healthcare-Native Solution Exists
+
+General-purpose conversation analytics platforms (Observe.AI, CallMiner, NICE) are designed for call center efficiency metrics — handle time, sentiment, script adherence. They lack:
+
+- HIPAA-compliant architecture with BAA readiness
+- Pharmacovigilance taxonomy (MedDRA coding, AE severity classification)
+- MedWatch field extraction and regulatory export workflows
+- AI-agent governance and provenance tracking
+
+This leaves pharma compliance teams with a choice between building internally — slow, expensive, and outside their core competency — or operating with the current blind spot.
+
 
 ## 3. From 5% to 100%: The Product Vision
 
@@ -147,13 +162,29 @@ The solution extends Infinitus Lens into a compliance intelligence platform capa
 
 The primary use case. AI models scan every conversation for potential adverse events, classify severity, and pre-populate MedWatch fields. Reviewers see the flagged transcript segment, audio evidence, and model confidence score — enabling a determination in under 4 minutes instead of 15–20 minutes of manual review.
 
+- High-recall AE identification (target: ≥97%)
+- Severity classification aligned to FDA reporting tiers
+- Suggested MedWatch fields with source evidence
+- Transcript and audio linkage for reviewer verification
+- Model provenance and explainability for audit defense
+
 #### SOP Adherence Monitoring — *for Operations Leads*
 
 Every conversation is scored against customer-specific scripts and process checklists. Deviations are flagged at the agent level, enabling targeted coaching instead of blanket retraining. Trend dashboards surface systemic issues before they become compliance events.
 
+- Script adherence analysis with deviation highlighting
+- Process deviation detection across call stages
+- Agent-level scoring with peer benchmarking
+- Trend analysis across programs, teams, and time periods
+
 #### Compliance Governance — *for Compliance Leadership*
 
 The connective layer that makes everything audit-ready. Every AI flag, reviewer decision, and escalation is logged with timestamps and user identity. Export packages are generated in formats aligned to FDA inspection requirements.
+
+- Unified triage workflows with role-based routing
+- Audit-ready exports (PDF, CSV, structured data)
+- Reviewer traceability with decision timestamps
+- End-to-end audit logging across all system actions
 
 
 ### Design Principles
@@ -214,11 +245,28 @@ Pharma compliance teams evaluating this space face three paths:
 
 The "extend" path is uniquely available through Infinitus because the foundational layers detailed in the Moat table already exist. Competitors would need to build them from scratch.
 
-## 5. Target Users & Personas
+## 5. Product Scope & Constraints
+
+| Constraint | Business Implication |
+| --- | --- |
+| 90-day timeline | Requires strict MVP prioritization |
+| FDA reporting requirements | Human reviewer required for all final regulatory determinations |
+| HIPAA / BAA / HITRUST | Security and compliance architecture required from Day 1 |
+| Legal review timelines | BAA and DPA negotiations are on the critical path |
+
+
+## 6. Target Users & Personas
 
 ### Economic Buyer
 
-**Compliance Leadership** — VP/Head of Pharmacovigilance or Compliance; owns regulatory risk, audit readiness, and vendor procurement decisions.
+#### Compliance Leadership
+
+Responsible for:
+
+- Regulatory risk management
+- Audit readiness
+- Pharmacovigilance operations
+- Vendor evaluation and procurement
 
 ### Primary Users
 
@@ -226,7 +274,7 @@ The diagram below details each persona's goals, pain points, daily workflows, an
 
 ![Pharmaceutical AI Compliance Platform Personas](images/user-persona-card.png)
 
-## 6. MVP Feature Prioritization
+## 7. MVP Feature Prioritization
 
 ### V1 — MVP Features
 
@@ -272,7 +320,7 @@ Anything outside this chain — SOP scoring, multi-channel support, PV system in
 | F12 | Real-Time Monitoring | Requires separate low-latency architecture | Batch analysis delivers 90%+ value within 90 days |
 | F13 | Automated FDA Submission | Regulatory risk requires phased rollout | Human-in-the-loop (UC05) must be proven first |
 
-## 7. Product Experience
+## 8. Product Experience
 
 ### Primary Workflow
 
@@ -280,17 +328,37 @@ The MVP is designed around a reviewer-centric compliance workflow.
 
 ![From Flag to Decision — Core Workflow](images/section8-core-workflow.png)
 
+#### Core Experience Principles
+
+- Prioritize reviewer efficiency
+- Surface explainable AI evidence
+- Maintain human-in-the-loop validation
+- Reduce time-to-decision
+- Provide audit-ready traceability
+
 ### Core Product Surfaces
 
 #### 1. Triage Queue
 
-Severity-prioritized case list with reviewer assignment, confidence scoring, and SLA countdown — optimized for one job: deciding the order of case handling.
+Capabilities include:
+
+- Severity-based prioritization
+- Reviewer assignment
+- Confidence scoring
+- SLA countdown visibility
+- Workflow status management
 
 #### 2. Case Detail View
 
-Highlighted transcript with audio cued to the detection timestamp, pre-populated MedWatch fields, and confirm/dismiss/escalate actions — every decision audit-logged with reviewer identity and timestamp.
+Capabilities include:
 
-## 8. From Contract to First Case Review
+- Highlighted transcript spans
+- Audio playback at detection timestamp
+- Pre-filled MedWatch fields
+- Reviewer confirmation and dismissal workflows
+- Audit logging and model provenance
+
+## 9. From Contract to First Case Review
 
 ### Why Pharma Onboarding Is Different
 
@@ -316,7 +384,16 @@ The most critical point in onboarding is **the first time a reviewer opens a rea
 
 Target: **first value moment within 5–7 weeks of contract signature.**
 
-## 9. Pilot Launch Plan
+## 10. Pilot Launch Plan
+
+### Pilot Objectives
+
+Validate:
+
+- AE detection accuracy
+- Reviewer workflow efficiency
+- Regulatory trustworthiness
+- Commercial viability
 
 ### Pilot Design
 
@@ -340,7 +417,7 @@ Target: **first value moment within 5–7 weeks of contract signature.**
 
 ![90-Day Pilot Timeline — PharCovAI](images/section10-pilot-timeline.png)
 
-## 10. How We'll Know It's Working
+## 11. How We'll Know It's Working
 
 The pilot scorecard is organized into three tiers, and they are not equal:
 
@@ -375,7 +452,7 @@ The pilot scorecard is organized into three tiers, and they are not equal:
 | Paid Conversion | Both partners by Week 14 | Two paying customers validates commercial viability and provides reference accounts for expansion. |
 | Expansion Intent | Additional therapy programs | Expansion within existing customers is the lowest-friction growth path and signals the product delivers enough value to scale. |
 
-## 11. The Week 12 Decision
+## 12. The Week 12 Decision
 
 At the end of Week 12, a Go / No-Go review is held with Infinitus leadership and pilot partner compliance leads. The outcome is one of three paths:
 
@@ -424,14 +501,16 @@ The pilot terminates if:
 | **Conditional Go** | 4-week remediation with specific fixes; re-evaluate at Week 16 as binary Go/No-Go |
 | **No-Go** | Post-mortem; preserve data and model weights; communicate transparently with partners; re-evaluate in 6 months |
 
-## 12. The Case for Building This
+## 13. The Case for Building This
 
 ### The Strategic Argument
+
+PharCovAI is not a side project or a feature extension — it is a platform bet that positions Infinitus at the center of a structural shift in pharmaceutical compliance. Infinitus has already demonstrated the ability to scale healthcare AI — recognized by Fast Company as one of the "World's Most Innovative Companies" and by Business Insider as a top healthcare startup — with conversation volume more than doubling from 46M to 100M+ minutes in under two years.
 
 Three things are true simultaneously, and this combination is rare:
 
 1. **The market is spending but underserved.** Pharma companies are allocating compliance budgets to tools that don't solve the actual problem. The $10B+ pharmacovigilance market is growing at ~9% CAGR, but no healthcare-native, AI-powered compliance intelligence platform exists today.
-2. **Infinitus is uniquely positioned.** No other company combines healthcare-native infrastructure, pharmacovigilance-specific capabilities, and existing pharma customer relationships. These advantages would take a competitor 18–24 months to replicate.
+2. **Infinitus is uniquely positioned.** The competitive landscape analysis (Section 4) demonstrates that no other company combines healthcare-native infrastructure, pharmacovigilance-specific capabilities, and existing pharma customer relationships. These advantages would take a competitor 18–24 months to replicate.
 3. **The window is time-bounded.** The convergence of AI agent adoption, LLM accuracy thresholds, and regulatory signaling creates a narrow window. The company that establishes the governance layer during this adoption wave becomes the default.
 
 ### The Cost of Inaction
@@ -451,6 +530,8 @@ If Infinitus does not build this:
 | Q3 (Months 7–9) | **Expand** | Launch V1.5 (SOP scoring, SMS/email, PV integration), expand within customers |
 | Q4 (Months 10–12) | **Scale** | Launch V2 (fax, multilingual), build sales playbook, establish customer advisory board |
 
+### 24-Month North Star
+
 Within 24 months, PharCovAI becomes the **system of record for AI-enabled pharmacovigilance and compliance operations** across Infinitus's pharma customer base — analyzing millions of conversations monthly, across all channels and languages, with demonstrated regulatory acceptance and audit defensibility.
 
 ### The Ask
@@ -464,3 +545,4 @@ To proceed, this initiative requires:
 | **Pilot partner commitment** | Executive sponsorship to engage 2 existing pharma customers |
 | **Legal fast-track** | Priority BAA/DPA review — Week 1 start, not queued |
 | **Go/No-Go authority** | Named decision-maker for the Week 12 review |
+

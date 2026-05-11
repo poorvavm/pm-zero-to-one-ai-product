@@ -4,103 +4,90 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This repository contains product strategy and planning documents for **PharCovAI** — an AI-powered conversation compliance and pharmacovigilance platform being evaluated as a new Infinitus product offering.
+This repository contains product strategy documents and an interactive prototype for **PharCovAI** — an AI-powered conversation compliance and pharmacovigilance platform proposed as a new Infinitus product offering.
 
 - **Author:** Poorva Mittal
-- **Product concept:** Compliance intelligence extension built on Infinitus Lens for pharma manufacturers — AE detection, SOP adherence monitoring, audit-ready workflows
+- **Product concept:** Compliance intelligence extension built on Infinitus Lens for pharma manufacturers — Adverse Event (AE) detection, Standard Operating Procedure (SOP) adherence monitoring, audit-ready workflows
 - **Target customers:** Pharmaceutical manufacturers with patient support operations
 - **Timeline constraint:** 90-day pilot-ready target
-- **Case study context:** This paper supports a working session with engineers, UX designers, and cross-functional stakeholders (see `infinitus-case-study-guidelines.md` for the anchor question and leadership priorities)
+- **Case study context:** Supports a working session with engineers, UX, and cross-functional stakeholders. See `infinitus-case-study-guidelines.md` for the anchor question and leadership priorities.
 
-## Repository Structure
+## Key Commands
 
-- `infinitus-case-study-guidelines.md` — Case study prompt and discussion guidelines from Infinitus (includes the anchor question and leadership priorities)
-- `pharcov-ai-case-study-execution-ideation-paper.md` — Full ideation paper with 90-day pilot execution plan (~540 lines, 13 sections)
-- `20260510-v1-pharcov-ai-case-study-execution-ideation-paper.md` — Earlier version of the ideation paper (preserved for reference)
-- `pharcov-ai-case-study-execution-ideation-paper.pdf` — PDF export (may be stale — regenerate with command below)
-- `images/` — PNG diagram assets (architecture, timeline, personas, product vision, Mermaid-rendered charts)
-- `diagrams/` — Mermaid source files (`.mmd`) for diagrams; render to PNG with `npx @mermaid-js/mermaid-cli -i <input.mmd> -o <output.png> -b white -w 1400`
-- `demo/` — Interactive HTML/CSS/JS prototype of PharCovAI's core product surfaces
-
-## Interactive Demo
-
-A working prototype of PharCovAI's reviewer workflow. Pure HTML/CSS/JS — no frameworks, no server, no build step.
-
-### Running the Demo
-
+### Open the demo
 ```
 open demo/index.html
 ```
+No server required — pure HTML/CSS/JS.
 
-### Demo Pages
-
-| Page | File | What It Shows |
-|------|------|---------------|
-| **Lens Dashboard** | `demo/index.html` | Infinitus Lens home screen with AE alert banner, compliance metrics, activity feed, program breakdown. Entry point to the demo. |
-| **Triage Queue** | `demo/triage-queue.html` | 10 AI-flagged cases across Pfizer/Novartis/Roche with sortable columns, sidebar filters (status, severity, customer, source, reviewer), summary bar with attention alerts. |
-| **Case Detail** | `demo/case-detail.html` | Full case review: sticky summary card, transcript with highlighted AE segments, audio player, editable MedWatch fields, AI reasoning, Confirm/Dismiss/Escalate decision flow with modals, live audit trail. |
-
-### Demo Flow
-
-Lens Dashboard → click AE alert or sidebar "AE Triage Queue" → Triage Queue → click any case row → Case Detail → make a decision (Confirm/Dismiss/Escalate)
-
-### Demo File Structure
-
+### Render a Mermaid diagram to PNG
 ```
-demo/
-├── index.html              Lens Dashboard (entry point)
-├── triage-queue.html       Triage Queue page
-├── case-detail.html        Case Detail View page
-├── requirements.md         Design contract / requirements doc
-├── css/styles.css          Shared design system (Infinitus brand)
-├── js/data.js              Mock data (10 cases, transcript, audit trail)
-├── js/triage.js            Sort, filter, assign logic
-├── js/case-detail.js       Decisions, modals, audit trail updates
-└── assets/logo.svg         Logo
+npx @mermaid-js/mermaid-cli -i diagrams/<name>.mmd -o images/<name>.png -b white -w 1400
 ```
 
-### Mock Data
-
-- 10 cases: Pfizer (4), Roche (3), Novartis (3)
-- Drugs: Xeljanz, Eliquis, Tecentriq, Cosentyx, Ibrance, Ocrevus, Entresto, Avastin, Kisqali, Paxlovid
-- Primary demo case: PC-2026-0003 (Roche, Tecentriq — skin rash with full transcript)
-
-## Working with the Ideation Paper
-
-The ideation paper is the primary document. All images use file-path references to PNGs in `images/` — no base64 inline images.
-
-### Generating PDF
-
+### Generate PDF of the ideation paper
 ```
 npx md-to-pdf pharcov-ai-case-study-execution-ideation-paper.md --pdf-options '{"format": "A4", "margin": {"top": "20mm", "bottom": "20mm", "left": "20mm", "right": "20mm"}}'
 ```
 
-### Section Map (for targeted reading)
+## Architecture
 
-| Section | Line | Topic |
-|---------|------|-------|
-| Table of Contents | ~9 | Two-level clickable index |
-| 1. Executive Summary | ~59 | Platform overview, UC01–UC05, market size ($10.36B), pilot targets |
-| 2. The Compliance Blind Spot | ~81 | Failure chain, AI governance vacuum, fragmented audit |
-| 3. From 5% to 100%: The Product Vision | ~123 | Before/after table, design principles, "What This Is Not" |
-| 4. Why Infinitus, Why Now | ~199 | Spending problem, four converging signals, moat table, competitive comparison |
-| 5. Product Scope & Constraints | ~240 | Constraint/implication table |
-| 6. Target Users & Personas | ~250 | Economic buyer, persona card diagram |
-| 7. MVP Feature Prioritization | ~269 | V1 dependency chain, V1/V1.5/V2/Deferred feature tables with Why column |
-| 8. Product Experience | ~315 | Workflow diagram, triage queue, case detail view |
-| 9. From Contract to First Case Review | ~353 | Why pharma onboarding is different, 5-phase gated table, first value moment |
-| 10. The 90-Day Pilot Plan | ~379 | Pilot design, execution tracks, Gantt timeline |
-| 11. How We'll Know It's Working | ~412 | 3-tier scorecard (safety/quality/business) with "Why This Target" rationale |
-| 12. The Week 12 Decision | ~447 | Go/Conditional Go/No-Go decision matrix with remediation scenarios |
-| 13. The Case for Building This | ~496 | Strategic argument, cost of inaction, quarterly roadmap, 24-month north star, the ask |
+### Documents
+- `pharcov-ai-case-study-execution-ideation-paper.md` — The primary document. 12-section ideation paper covering the compliance blind spot, product vision, feature prioritization, UX design, onboarding, pilot plan, metrics, and strategic case. All image references use file-path references to PNGs in `images/` — no base64 inline images.
+- `20260510-v1-pharcov-ai-case-study-execution-ideation-paper.md` — Earlier 13-section snapshot (included "Product Scope & Constraints" as its own section 5), preserved for reference only.
+- `20260511-v2-pharcov-ai-case-study-execution-ideation-paper.md` — Second snapshot (same structure as current primary), preserved for reference only.
+- `infinitus-case-study-guidelines.md` — Source prompt and anchor questions from Infinitus.
 
-### Image References
+### Ideation Paper — Section Map
+| Section | Topic |
+|---------|-------|
+| 1. Executive Summary | Platform overview, use cases, market size, pilot targets |
+| 2. The Compliance Blind Spot | Failure chain, AI governance vacuum, fragmented audit landscape |
+| 3. From 5% to 100%: The Product Vision | Before/after, design principles, what this is not |
+| 4. Why Infinitus, Why Now | Spending problem, four converging signals, moat table, competitive comparison |
+| 5. Target Users & Personas | Economic buyer, persona card diagram |
+| 6. MVP Feature Prioritization | V1 dependency chain, V1/V1.5/V2/Deferred feature tables with Why column |
+| 7. Product Experience | Workflow diagram, triage queue, case detail view |
+| 8. From Contract to First Case Review | Why pharma onboarding is different, 5-phase gated table, first value moment |
+| 9. Pilot Launch Plan | Pilot design, execution tracks, Gantt timeline |
+| 10. How We'll Know It's Working | 3-tier scorecard (safety / quality / business) with target rationale |
+| 11. The Week 12 Decision | Go / Conditional Go / No-Go decision matrix with remediation scenarios |
+| 12. The Case for Building This | Strategic argument, cost of inaction, quarterly roadmap, 24-month north star, the ask |
 
-All images use file-path references (`![Alt](images/filename.png)`). Currently referenced:
-- Section 1: `enterprise-architecture-diagram-ai-powered-pharmaceutical.png`
-- Section 3: `pharcov-ai-product-vision.png`, `data-ingestion-and-training-pipeline.png`
-- Section 6: `user-persona-card.png`
-- Section 8: `section8-core-workflow.png`
-- Section 10: `section10-pilot-timeline.png`
+### Demo — JS Data Architecture
+`js/data.js` is the single source of truth for all mock data — 10 case objects and the full PC-2026-0003 transcript/audit trail. Both `triage.js` and `case-detail.js` read from `CASES` and `CASE_DETAIL` exported from `data.js`. When adding or modifying cases, only `data.js` needs to change.
 
-Mermaid sources in `diagrams/`: `section2-compliance-blind-spot.mmd`, `section7-build-sequence.mmd`, `section8-core-workflow.mmd`, `section10-pilot-timeline.mmd`.
+- `triage.js` — sort, filter (real-time checkbox/dropdown filtering against `CASES`), row click navigation, "Assign to me" handler
+- `case-detail.js` — decision modals (Confirm/Dismiss/Escalate), MedWatch field edit state, transcript jump, audio playhead, live audit trail updates
+
+### Demo — Two HTML Layout Patterns
+The three demo pages use two distinct layouts:
+- **`index.html` (Lens Dashboard)** — sidebar navigation shell (`lens-sidebar` + `lens-main`), used as the product entry point
+- **`triage-queue.html` and `case-detail.html`** — top navigation bar with left-sidebar filters or two-panel split (`60% / 40%`), no shared shell with `index.html`
+
+Navigation between them is handled via plain `<a href>` links, not a router.
+
+### Demo — CSS Design System
+All design tokens are CSS custom properties defined at `:root` in `css/styles.css`. The canonical values and their intended usage are documented in `demo/requirements.md` (Section 2 — Design System). Key tokens:
+- `--color-accent` (`#0D9488`) — primary buttons, active states, links
+- `--color-severity-{critical|high|medium|low}` — severity badge colors
+- `--color-status-{new|review|confirmed|dismissed}` — status badge colors
+- SLA urgency coloring is applied inline via JS in `triage.js` and `case-detail.js`, not via CSS classes
+
+### Diagrams
+Mermaid source files in `diagrams/` with corresponding rendered PNGs in `images/`:
+- `section2-compliance-blind-spot.mmd` — failure chain and scale of missed coverage
+- `section7-build-sequence.mmd` — V1 feature dependency/build order
+- `section8-core-workflow.mmd` — reviewer workflow (Triage Queue → Case Detail → decision)
+- `section10-pilot-timeline.mmd` — 90-day Gantt
+
+### Image References in Ideation Paper
+| Section | Image file |
+|---------|-----------|
+| 1 | `enterprise-architecture-diagram-ai-powered-pharmaceutical.png` |
+| 3 | `pharcov-ai-product-vision.png`, `data-ingestion-and-training-pipeline.png` |
+| 5 | `user-persona-card.png` |
+| 7 | `section8-core-workflow.png` |
+| 9 | `section10-pilot-timeline.png` |
+
+Note: `section8-core-workflow.png` and `section10-pilot-timeline.png` are legacy filenames from before sections were renumbered — do not rename them as the paper still references them by these paths.
