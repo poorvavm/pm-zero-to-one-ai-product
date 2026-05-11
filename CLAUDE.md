@@ -36,7 +36,9 @@ npx md-to-pdf pharcov-ai-case-study-execution-ideation-paper.md --pdf-options '{
 - `pharcov-ai-case-study-execution-ideation-paper.md` — The primary document. 12-section ideation paper covering the compliance blind spot, product vision, feature prioritization, UX design, onboarding, pilot plan, metrics, and strategic case. All image references use file-path references to PNGs in `images/` — no base64 inline images.
 - `20260510-v1-pharcov-ai-case-study-execution-ideation-paper.md` — Earlier 13-section snapshot (included "Product Scope & Constraints" as its own section 5), preserved for reference only.
 - `20260511-v2-pharcov-ai-case-study-execution-ideation-paper.md` — Second snapshot (same structure as current primary), preserved for reference only.
+- `20260511-v3-pharcov-ai-case-study-execution-ideation-paper.md` — Third snapshot, preserved for reference only.
 - `infinitus-case-study-guidelines.md` — Source prompt and anchor questions from Infinitus.
+- `demo/requirements.md` — Full demo specification: design system tokens, component patterns, page layouts, interaction behaviors, and data model. Canonical reference for how the demo should look and behave.
 
 ### Ideation Paper — Section Map
 | Section | Topic |
@@ -91,3 +93,11 @@ Mermaid source files in `diagrams/` with corresponding rendered PNGs in `images/
 | 9 | `section10-pilot-timeline.png` |
 
 Note: `section8-core-workflow.png` and `section10-pilot-timeline.png` are legacy filenames from before sections were renumbered — do not rename them as the paper still references them by these paths.
+
+### Generated PDFs
+- `pharcov-ai-case-study-execution-ideation-paper.pdf` — rendered from the primary ideation paper via `md-to-pdf`
+- `infinitus-case-study-guidelines.pdf` — PDF copy of the case study guidelines
+
+### Notes
+- The repo has no `.gitignore` — `.DS_Store` files are checked in. Be mindful not to add build artifacts or OS files when committing.
+- The demo is entirely static (no `package.json`, no build step). `npx` commands for Mermaid and `md-to-pdf` fetch packages on demand.
