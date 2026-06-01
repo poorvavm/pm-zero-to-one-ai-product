@@ -535,10 +535,10 @@ for i, (title, desc, color) in enumerate(signals):
 
 # Moat summary bar
 moat_items = [
-    ("100M+ min", "Conversations"),
-    ("7M+", "Calls Processed"),
+    ("Millions+", "Conversations"),
+    ("Millions", "Calls Processed"),
     ("1,000+", "Therapies"),
-    ("44%", "Healthcare F50"),
+    ("Significant\nShare", "Healthcare F50"),
 ]
 y_bar = Inches(5.5)
 for i, (num, label) in enumerate(moat_items):
@@ -562,7 +562,7 @@ Second, LLM capabilities have crossed the accuracy threshold. High-recall AE det
 
 Third, regulators are signaling intent. The FDA's evolving AI framework and the EU AI Act's high-risk classification tell us companies deploying AI in patient-facing roles will need centralized monitoring.
 
-Fourth — and this is our key advantage — the Company already has the infrastructure. We've processed over 100 million minutes of conversations, 7 million calls, across 1,000+ therapies. We serve 44% of the healthcare Fortune 50. This is an extension, not a greenfield build. A competitor would need 18-24 months to replicate what we already have.""")
+Fourth — and this is our key advantage — the Company already has the infrastructure. We've processed hundreds of millions of minutes of conversations across hundreds of therapies, serving a significant share of the healthcare Fortune 50. This is an extension, not a greenfield build. A competitor would need 18-24 months to replicate what we already have.""")
 
 
 # ── SLIDE 8: Target Users ───────────────────────────────────

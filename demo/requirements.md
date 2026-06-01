@@ -95,7 +95,7 @@ A fixed top bar present on both pages:
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-- Left: the Company logo (text-based: "infinitus" in lowercase bold + "PharCovAI" label)
+- Left: the Company logo (text-based: "PharCovAI" in lowercase bold)
 - Center: Navigation tabs — "Triage Queue" and "Case Detail" (active state: teal underline)
 - Right: User name and role badge ("PV Analyst")
 

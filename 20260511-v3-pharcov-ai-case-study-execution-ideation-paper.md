@@ -20,10 +20,10 @@
    - [Core Product Outputs](#core-product-outputs)
    - [Design Principles](#design-principles)
    - [What This Is Not](#what-this-is-not)
-4. [Why Now — The Strategic Moat](#4-why-infinitus-why-now)
+4. [Why Now — The Strategic Moat](#4-why-now--the-strategic-moat)
    - [The Spending Problem](#the-spending-problem)
    - [Why Now — Four Converging Signals](#why-now--four-converging-signals)
-   - [The Platform Moat](#the-infinitus-moat)
+   - [The Platform Moat](#the-platform-moat)
    - [Why Not Someone Else?](#why-not-someone-else)
 5. [Target Users & Personas](#5-target-users--personas)
    - [Economic Buyer](#economic-buyer)
@@ -197,9 +197,9 @@ the Company's advantage is not a single feature — it is a compounding set of b
 
 | Advantage | What It Means | The Numbers |
 | --- | --- | --- |
-| **Data moat** | Historical conversation datasets across pharma patient support programs that no competitor can access | 100M+ minutes of conversation automated; 7M+ calls processed; 1,000+ therapies covered. A new entrant starts from zero. |
-| **Infrastructure reuse** | HIPAA-compliant conversation ingestion, storage, and processing already exist at scale | 3.7M patients supported; 125,000+ providers' workflows impacted; 98% of largest payors by state supported. A competitor would need 12–18 months to replicate. |
-| **Customer trust** | Existing pharma relationships with BAA, security review, and vendor qualification already complete | 44% of healthcare Fortune 50 are customers; 27% of Fortune 100 healthcare. For a new vendor, qualification alone takes 6–12 months. |
+| **Data moat** | Historical conversation datasets across pharma patient support programs that no competitor can access | Hundreds of millions of minutes of conversation automated; millions of calls processed; hundreds of therapies covered. A new entrant starts from zero. |
+| **Infrastructure reuse** | HIPAA-compliant conversation ingestion, storage, and processing already exist at scale | Millions of patients supported; thousands of providers' workflows impacted; broad payor coverage nationwide. A competitor would need 12–18 months to replicate. |
+| **Customer trust** | Existing pharma relationships with BAA, security review, and vendor qualification already complete | A significant share of the healthcare Fortune 50 and Fortune 100 are customers. For a new vendor, qualification alone takes 6–12 months. |
 | **Domain expertise** | Team understands healthcare conversation workflows at a depth generic vendors cannot match | 300+ system improvements shipped in 6 months; customers see 10% increase in data accuracy and 50% ROI vs. manual processes. |
 
 ### Why Not Someone Else?
