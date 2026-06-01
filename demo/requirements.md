@@ -28,7 +28,7 @@ The end-to-end reviewer workflow: a PV Specialist opens the triage queue, sees A
 
 ## 2. Design System
 
-### Brand: the Company
+### Brand: the platform
 
 | Token | Value | Usage |
 | --- | --- | --- |
@@ -90,12 +90,12 @@ A fixed top bar present on both pages:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│ [the Company Logo]  PharCovAI          Triage Queue | Case Detail    │
+│ [the platform Logo]  PharCovAI          Triage Queue | Case Detail    │
 │                                            Sarah Chen, PV Analyst  │
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-- Left: the Company logo (text-based: "PharCovAI" in lowercase bold)
+- Left: the platform logo (text-based: "PharCovAI" in lowercase bold)
 - Center: Navigation tabs — "Triage Queue" and "Case Detail" (active state: teal underline)
 - Right: User name and role badge ("PV Analyst")
 
@@ -386,7 +386,7 @@ Each entry shows: timestamp, event description, and actor (user name, "System", 
 **Transcript excerpt:**
 
 ```
-[00:00] Agent: Thank you for calling the Company Patient Support
+[00:00] Agent: Thank you for calling the platform Patient Support
         for Roche. How can I help you today?
 
 [00:08] Patient: Hi, yes, I'm calling about my Tecentriq treatment.
@@ -511,7 +511,7 @@ demo/
 │   ├── triage.js            ← Triage queue logic (sort, filter, navigation)
 │   └── case-detail.js       ← Case detail logic (decisions, modals, audit trail)
 └── assets/
-    └── logo.svg             ← the Company logo (text-based)
+    └── logo.svg             ← the platform logo (text-based)
 ```
 
 ### Dependencies

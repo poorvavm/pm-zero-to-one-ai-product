@@ -1,4 +1,4 @@
-# PharCovAI: An Ideation Paper for AI-Powered Pharmacovigilance at the Company
+# PharCovAI: An Ideation Paper for AI-Powered Pharmacovigilance at the platform
 
 **Author:** Poorva Mittal
 
@@ -78,7 +78,7 @@ This proposal introduces a compliance intelligence extension built on top of AI 
 - **UC04:** Unified multi-channel conversation review
 - **UC05:** Human-in-the-loop regulatory decision making
 
-The proposed MVP focuses on high-recall AE detection and triage workflows for pharmaceutical compliance teams. The 90-day pilot targets ≥97% AE recall with <4-minute median reviewer time-to-decision, leveraging the Company's existing conversation infrastructure and Lens analytics platform.
+The proposed MVP focuses on high-recall AE detection and triage workflows for pharmaceutical compliance teams. The 90-day pilot targets ≥97% AE recall with <4-minute median reviewer time-to-decision, leveraging the platform's existing conversation infrastructure and Lens analytics platform.
 
 ![AI-Powered Pharmaceutical Compliance Monitoring](images/enterprise-architecture-diagram-ai-powered-pharmaceutical.png)
 
@@ -189,18 +189,18 @@ The opportunity is not to create new spend — it is to redirect existing compli
 
 3. **Regulators are signaling intent.** The FDA's evolving AI/ML framework, the EU AI Act's high-risk classification for healthcare AI, and increasing FDA scrutiny of AI-generated patient interactions all point in one direction: companies deploying AI in patient-facing roles will need to demonstrate centralized monitoring and audit readiness.
 
-4. **the Company already has the infrastructure.** This is not a cold start. the Company already processes healthcare conversations at scale, serves a significant share of the Fortune 50 healthcare market, and covers over a thousand therapies. The delta between current capabilities and a compliance intelligence product is an extension — not a greenfield build. The specific numbers are detailed in the Moat table below.
+4. **this platform already has the infrastructure.** This is not a cold start. this platform already processes healthcare conversations at scale, serves a significant share of the Fortune 50 healthcare market, and covers hundreds of therapies. The delta between current capabilities and a compliance intelligence product is an extension — not a greenfield build. The specific numbers are detailed in the Moat table below.
 
 ### The Platform Moat
 
-the Company's advantage is not a single feature — it is a compounding set of barriers that are difficult to replicate:
+the platform's advantage is not a single feature — it is a compounding set of barriers that are difficult to replicate:
 
 | Advantage | What It Means | The Numbers |
 | --- | --- | --- |
 | **Data moat** | Historical conversation datasets across pharma patient support programs that no competitor can access | Hundreds of millions of minutes of conversation automated; millions of calls processed; hundreds of therapies covered. A new entrant starts from zero. |
 | **Infrastructure reuse** | HIPAA-compliant conversation ingestion, storage, and processing already exist at scale | Millions of patients supported; thousands of providers' workflows impacted; broad payor coverage nationwide. A competitor would need 12–18 months to replicate. |
 | **Customer trust** | Existing pharma relationships with BAA, security review, and vendor qualification already complete | A significant share of the healthcare Fortune 50 and Fortune 100 are customers. For a new vendor, qualification alone takes 6–12 months. |
-| **Domain expertise** | Team understands healthcare conversation workflows at a depth generic vendors cannot match | 300+ system improvements shipped in 6 months; customers see 10% increase in data accuracy and 50% ROI vs. manual processes. |
+| **Domain expertise** | Team understands healthcare conversation workflows at a depth generic vendors cannot match | Demonstrated rapid iteration velocity with measurable gains in data accuracy and ROI for customers. |
 
 ### Why Not Someone Else?
 
@@ -212,7 +212,7 @@ Pharma compliance teams evaluating this space face three paths:
 | **Buy generic** (Observe.AI, CallMiner, NICE) | Weeks to deploy | Not healthcare-native: no HIPAA architecture, no PV taxonomy, no MedWatch integration, no AI-agent governance |
 | **Extend with AI Lens** | 90-day pilot | Leverages all four moat advantages (see above) from Day 1 |
 
-The "extend" path is uniquely available through the Company because the foundational layers detailed in the Moat table already exist. Competitors would need to build them from scratch.
+The "extend" path is uniquely available through the platform because the foundational layers detailed in the Moat table already exist. Competitors would need to build them from scratch.
 
 ## 5. Target Users & Personas
 
@@ -323,7 +323,7 @@ Target: **first value moment within 5–7 weeks of contract signature.**
 | Category | Scope |
 | --- | --- |
 | Duration | 4-week live pilot |
-| Participants | 2 existing the Company pharma customers |
+| Participants | 2 existing the platform pharma customers |
 | Programs | 1 therapy program per customer |
 | Channels | Voice-only for MVP |
 | Weekly Volume | ~3,000 conversations per partner |
@@ -344,7 +344,7 @@ Target: **first value moment within 5–7 weeks of contract signature.**
 
 The pilot scorecard is organized into three tiers, and they are not equal:
 
-1. **Safety Metrics** — Non-negotiable gates. If any safety metric fails, the pilot stops. These protect patients and the Company's regulatory exposure.
+1. **Safety Metrics** — Non-negotiable gates. If any safety metric fails, the pilot stops. These protect patients and the platform's regulatory exposure.
 2. **Product Quality Metrics** — Optimization targets. Misses here trigger engineering iteration, not pilot termination.
 3. **Business Metrics** — Commercial signals measured at pilot end. They inform the commercialization decision, not the safety decision.
 
@@ -377,7 +377,7 @@ The pilot scorecard is organized into three tiers, and they are not equal:
 
 ## 11. The Week 12 Decision
 
-At the end of Week 12, a Go / No-Go review is held with the Company leadership and pilot partner compliance leads. The outcome is one of three paths:
+At the end of Week 12, a Go / No-Go review is held with platform leadership and pilot partner compliance leads. The outcome is one of three paths:
 
 ### Go Criteria
 
@@ -431,12 +431,12 @@ The pilot terminates if:
 Three things are true simultaneously, and this combination is rare:
 
 1. **The market is spending but underserved.** Pharma companies are allocating compliance budgets to tools that don't solve the actual problem. The $10B+ pharmacovigilance market is growing at ~9% CAGR, but no healthcare-native, AI-powered compliance intelligence platform exists today.
-2. **the Company is uniquely positioned.** No other company combines healthcare-native infrastructure, pharmacovigilance-specific capabilities, and existing pharma customer relationships. These advantages would take a competitor 18–24 months to replicate.
+2. **this platform is uniquely positioned.** No other company combines healthcare-native infrastructure, pharmacovigilance-specific capabilities, and existing pharma customer relationships. These advantages would take a competitor 18–24 months to replicate.
 3. **The window is time-bounded.** The convergence of AI agent adoption, LLM accuracy thresholds, and regulatory signaling creates a narrow window. The company that establishes the governance layer during this adoption wave becomes the default.
 
 ### The Cost of Inaction
 
-If the Company does not build this:
+If this platform does not build this:
 
 - **Customers will build internally.** Large pharma companies with engineering resources will invest in custom compliance tooling. Once built, switching costs make them unlikely to adopt an external product later.
 - **Generic platforms will add surface-level compliance features.** They won't be healthcare-native, but they'll be "good enough" to capture budget and block new entrants.
@@ -451,7 +451,7 @@ If the Company does not build this:
 | Q3 (Months 7–9) | **Expand** | Launch V1.5 (SOP scoring, SMS/email, PV integration), expand within customers |
 | Q4 (Months 10–12) | **Scale** | Launch V2 (fax, multilingual), build sales playbook, establish customer advisory board |
 
-Within 24 months, PharCovAI becomes the **system of record for AI-enabled pharmacovigilance and compliance operations** across the Company's pharma customer base — analyzing millions of conversations monthly, across all channels and languages, with demonstrated regulatory acceptance and audit defensibility.
+Within 24 months, PharCovAI becomes the **system of record for AI-enabled pharmacovigilance and compliance operations** across the platform's pharma customer base — analyzing millions of conversations monthly, across all channels and languages, with demonstrated regulatory acceptance and audit defensibility.
 
 ### The Ask
 

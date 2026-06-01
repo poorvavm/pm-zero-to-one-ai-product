@@ -37,7 +37,7 @@ npx md-to-pdf pharcov-ai-case-study-execution-ideation-paper.md --pdf-options '{
 - `20260510-v1-pharcov-ai-case-study-execution-ideation-paper.md` — Earlier 13-section snapshot (included "Product Scope & Constraints" as its own section 5), preserved for reference only.
 - `20260511-v2-pharcov-ai-case-study-execution-ideation-paper.md` — Second snapshot (same structure as current primary), preserved for reference only.
 - `20260511-v3-pharcov-ai-case-study-execution-ideation-paper.md` — Third snapshot, preserved for reference only.
-- `pharcovai-case-study-guidelines.md` — Source prompt and anchor questions from the Company.
+- `pharcovai-case-study-guidelines.md` — Source prompt and anchor questions from the platform.
 - `demo/requirements.md` — Full demo specification: design system tokens, component patterns, page layouts, interaction behaviors, and data model. Canonical reference for how the demo should look and behave.
 
 ### Ideation Paper — Section Map

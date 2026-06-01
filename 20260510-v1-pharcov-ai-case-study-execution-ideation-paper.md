@@ -101,11 +101,11 @@ Several market shifts make this the right timing:
 - Rapid adoption of AI agents in patient support programs
 - Advancements in LLM-based conversation analysis
 - Increased regulatory attention toward AI-driven workflows
-- Existing the Company infrastructure and conversation data advantage
+- Existing the platform infrastructure and conversation data advantage
 
-### Strategic Advantage for the Company
+### Strategic Advantage for the platform
 
-the Company already possesses:
+the platform already possesses:
 
 - Established healthcare infrastructure
 - Existing customer relationships
@@ -146,7 +146,7 @@ Responsible for:
 | Compliance / PV Specialist | Validate and process reportable adverse events | Triage Queue + Case Detail View |
 | Patient Services Operations Lead | Monitor operational adherence and workflow quality | Program Trend Dashboard |
 | Team Supervisor | Coach and review agent performance | Call Scorecards |
-| the Company Solutions Team | Configure customer-specific workflows | Admin Configuration Console |
+| the platform Solutions Team | Configure customer-specific workflows | Admin Configuration Console |
 
 ![][image4]
 
@@ -253,7 +253,7 @@ Validate:
 | Category | Scope |
 | --- | --- |
 | Duration | 4-week live pilot |
-| Participants | 2 existing the Company pharma customers |
+| Participants | 2 existing the platform pharma customers |
 | Programs | 1 therapy program per customer |
 | Channels | Voice-only for MVP |
 | Weekly Volume | ~3,000 conversations per partner |
@@ -332,7 +332,7 @@ It establishes:
 - A differentiated compliance intelligence capability
 - A reusable workflow foundation across multiple communication channels
 
-The combination of existing infrastructure, proprietary healthcare data, and growing AI adoption creates a strong opportunity for the Company to become the system of record for AI-enabled pharmacovigilance and compliance operations.
+The combination of existing infrastructure, proprietary healthcare data, and growing AI adoption creates a strong opportunity for the platform to become the system of record for AI-enabled pharmacovigilance and compliance operations.
 
 ## 14. Long-Term Vision
 
