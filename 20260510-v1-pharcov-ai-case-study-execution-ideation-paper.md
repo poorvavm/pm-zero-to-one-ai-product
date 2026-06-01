@@ -12,7 +12,7 @@ Pharmaceutical manufacturers carry regulatory responsibility for every patient a
 
 Current workflows review only 1–5% of conversations, leaving critical compliance, pharmacovigilance (PV), and operational risks undetected. As AI agents become increasingly embedded into patient support operations, regulatory scrutiny around AI-generated interactions is expected to increase significantly.
 
-This proposal introduces a compliance intelligence extension built on top of Infinitus Lens to enable:
+This proposal introduces a compliance intelligence extension built on top of AI Lens to enable:
 
 - **UC01:** AI-assisted adverse event (AE) detection
 - **UC02:** SOP adherence monitoring
@@ -56,7 +56,7 @@ Pharma manufacturers currently face several operational and compliance gaps:
 
 The vision is to transition pharmaceutical customers from manually reviewing approximately 5% of conversations to algorithmically evaluating 100% of interactions while maintaining human oversight for all regulatory determinations.
 
-The solution extends Infinitus Lens into a compliance intelligence platform capable of analyzing data sources:
+The solution extends AI Lens into a compliance intelligence platform capable of analyzing data sources:
 
 - Voice conversations
 - SMS interactions
@@ -101,11 +101,11 @@ Several market shifts make this the right timing:
 - Rapid adoption of AI agents in patient support programs
 - Advancements in LLM-based conversation analysis
 - Increased regulatory attention toward AI-driven workflows
-- Existing Infinitus infrastructure and conversation data advantage
+- Existing the Company infrastructure and conversation data advantage
 
-### Strategic Advantage for Infinitus
+### Strategic Advantage for the Company
 
-Infinitus already possesses:
+the Company already possesses:
 
 - Established healthcare infrastructure
 - Existing customer relationships
@@ -146,7 +146,7 @@ Responsible for:
 | Compliance / PV Specialist | Validate and process reportable adverse events | Triage Queue + Case Detail View |
 | Patient Services Operations Lead | Monitor operational adherence and workflow quality | Program Trend Dashboard |
 | Team Supervisor | Coach and review agent performance | Call Scorecards |
-| Infinitus Solutions Team | Configure customer-specific workflows | Admin Configuration Console |
+| the Company Solutions Team | Configure customer-specific workflows | Admin Configuration Console |
 
 ![][image4]
 
@@ -253,7 +253,7 @@ Validate:
 | Category | Scope |
 | --- | --- |
 | Duration | 4-week live pilot |
-| Participants | 2 existing Infinitus pharma customers |
+| Participants | 2 existing the Company pharma customers |
 | Programs | 1 therapy program per customer |
 | Channels | Voice-only for MVP |
 | Weekly Volume | ~3,000 conversations per partner |
@@ -332,7 +332,7 @@ It establishes:
 - A differentiated compliance intelligence capability
 - A reusable workflow foundation across multiple communication channels
 
-The combination of existing infrastructure, proprietary healthcare data, and growing AI adoption creates a strong opportunity for Infinitus to become the system of record for AI-enabled pharmacovigilance and compliance operations.
+The combination of existing infrastructure, proprietary healthcare data, and growing AI adoption creates a strong opportunity for the Company to become the system of record for AI-enabled pharmacovigilance and compliance operations.
 
 ## 14. Long-Term Vision
 

@@ -28,7 +28,7 @@ The end-to-end reviewer workflow: a PV Specialist opens the triage queue, sees A
 
 ## 2. Design System
 
-### Brand: Infinitus
+### Brand: the Company
 
 | Token | Value | Usage |
 | --- | --- | --- |
@@ -90,12 +90,12 @@ A fixed top bar present on both pages:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│ [Infinitus Logo]  PharCovAI          Triage Queue | Case Detail    │
+│ [the Company Logo]  PharCovAI          Triage Queue | Case Detail    │
 │                                            Sarah Chen, PV Analyst  │
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-- Left: Infinitus logo (text-based: "infinitus" in lowercase bold + "PharCovAI" label)
+- Left: the Company logo (text-based: "infinitus" in lowercase bold + "PharCovAI" label)
 - Center: Navigation tabs — "Triage Queue" and "Case Detail" (active state: teal underline)
 - Right: User name and role badge ("PV Analyst")
 
@@ -386,7 +386,7 @@ Each entry shows: timestamp, event description, and actor (user name, "System", 
 **Transcript excerpt:**
 
 ```
-[00:00] Agent: Thank you for calling Infinitus Patient Support
+[00:00] Agent: Thank you for calling the Company Patient Support
         for Roche. How can I help you today?
 
 [00:08] Patient: Hi, yes, I'm calling about my Tecentriq treatment.
@@ -511,7 +511,7 @@ demo/
 │   ├── triage.js            ← Triage queue logic (sort, filter, navigation)
 │   └── case-detail.js       ← Case detail logic (decisions, modals, audit trail)
 └── assets/
-    └── logo.svg             ← Infinitus logo (text-based)
+    └── logo.svg             ← the Company logo (text-based)
 ```
 
 ### Dependencies

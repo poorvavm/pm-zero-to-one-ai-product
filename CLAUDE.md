@@ -4,13 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This repository contains product strategy documents and an interactive prototype for **PharCovAI** — an AI-powered conversation compliance and pharmacovigilance platform proposed as a new Infinitus product offering.
+This repository contains product strategy documents and an interactive prototype for **PharCovAI** — an AI-powered conversation compliance and pharmacovigilance platform proposed as a new AI product offering.
 
 - **Author:** Poorva Mittal
-- **Product concept:** Compliance intelligence extension built on Infinitus Lens for pharma manufacturers — Adverse Event (AE) detection, Standard Operating Procedure (SOP) adherence monitoring, audit-ready workflows
+- **Product concept:** Compliance intelligence extension built on AI Lens for pharma manufacturers — Adverse Event (AE) detection, Standard Operating Procedure (SOP) adherence monitoring, audit-ready workflows
 - **Target customers:** Pharmaceutical manufacturers with patient support operations
 - **Timeline constraint:** 90-day pilot-ready target
-- **Case study context:** Supports a working session with engineers, UX, and cross-functional stakeholders. See `infinitus-case-study-guidelines.md` for the anchor question and leadership priorities.
+- **Case study context:** Supports a working session with engineers, UX, and cross-functional stakeholders. See `pharcovai-case-study-guidelines.md` for the anchor question and leadership priorities.
 
 ## Key Commands
 
@@ -37,7 +37,7 @@ npx md-to-pdf pharcov-ai-case-study-execution-ideation-paper.md --pdf-options '{
 - `20260510-v1-pharcov-ai-case-study-execution-ideation-paper.md` — Earlier 13-section snapshot (included "Product Scope & Constraints" as its own section 5), preserved for reference only.
 - `20260511-v2-pharcov-ai-case-study-execution-ideation-paper.md` — Second snapshot (same structure as current primary), preserved for reference only.
 - `20260511-v3-pharcov-ai-case-study-execution-ideation-paper.md` — Third snapshot, preserved for reference only.
-- `infinitus-case-study-guidelines.md` — Source prompt and anchor questions from Infinitus.
+- `pharcovai-case-study-guidelines.md` — Source prompt and anchor questions from the Company.
 - `demo/requirements.md` — Full demo specification: design system tokens, component patterns, page layouts, interaction behaviors, and data model. Canonical reference for how the demo should look and behave.
 
 ### Ideation Paper — Section Map
@@ -46,7 +46,7 @@ npx md-to-pdf pharcov-ai-case-study-execution-ideation-paper.md --pdf-options '{
 | 1. Executive Summary | Platform overview, use cases, market size, pilot targets |
 | 2. The Compliance Blind Spot | Failure chain, AI governance vacuum, fragmented audit landscape |
 | 3. From 5% to 100%: The Product Vision | Before/after, design principles, what this is not |
-| 4. Why Infinitus, Why Now | Spending problem, four converging signals, moat table, competitive comparison |
+| 4. Why Now — The Strategic Moat | Spending problem, four converging signals, moat table, competitive comparison |
 | 5. Target Users & Personas | Economic buyer, persona card diagram |
 | 6. MVP Feature Prioritization | V1 dependency chain, V1/V1.5/V2/Deferred feature tables with Why column |
 | 7. Product Experience | Workflow diagram, triage queue, case detail view |
@@ -96,7 +96,6 @@ Note: `section8-core-workflow.png` and `section10-pilot-timeline.png` are legacy
 
 ### Generated PDFs
 - `pharcov-ai-case-study-execution-ideation-paper.pdf` — rendered from the primary ideation paper via `md-to-pdf`
-- `infinitus-case-study-guidelines.pdf` — PDF copy of the case study guidelines
 
 ### Notes
 - The repo has no `.gitignore` — `.DS_Store` files are checked in. Be mindful not to add build artifacts or OS files when committing.

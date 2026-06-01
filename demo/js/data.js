@@ -211,7 +211,7 @@ const DETAILED_CASE = {
   },
 
   transcript: [
-    { time: "00:00", speaker: "agent", text: "Thank you for calling Infinitus Patient Support for Roche. How can I help you today?" },
+    { time: "00:00", speaker: "agent", text: "Thank you for calling the Company Patient Support for Roche. How can I help you today?" },
     { time: "00:08", speaker: "patient", text: "Hi, yes, I'm calling about my Tecentriq treatment. I had my third infusion last Tuesday and I've been having some issues since then." },
     { time: "00:18", speaker: "agent", text: "I'm sorry to hear that. Can you tell me more about what you've been experiencing?" },
     { time: "00:24", speaker: "patient", text: "Well, about two days after the infusion, I started getting these itchy bumps all over my arms. And now it's spread to my chest and back too. It's really uncomfortable.", flagged: true },

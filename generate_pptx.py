@@ -8,7 +8,7 @@ from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
 import os
 
-# ── Color palette (Infinitus AI: Light Blue, Cyan, White) ──
+# ── Color palette (PharCovAI: Light Blue, Cyan, White) ──
 CYAN        = RGBColor(0x0D, 0x94, 0x88)  # #0D9488 teal/cyan accent
 LIGHT_BLUE  = RGBColor(0x0E, 0xA5, 0xE9)  # #0EA5E9
 DARK_BLUE   = RGBColor(0x0F, 0x17, 0x2A)  # dark navy for text
@@ -267,7 +267,7 @@ add_text_box(slide, Inches(1), Inches(2.8), Inches(11), Inches(0.8),
 add_divider_line(slide, Inches(1), Inches(3.8), Inches(2))
 
 add_text_box(slide, Inches(1), Inches(4.1), Inches(8), Inches(0.5),
-             "Extending Infinitus Lens for Pharmaceutical Manufacturers",
+             "Extending AI Lens for Pharmaceutical Manufacturers",
              font_size=18, color=MID_GRAY)
 
 add_text_box(slide, Inches(1), Inches(5.5), Inches(8), Inches(0.4),
@@ -276,7 +276,7 @@ add_text_box(slide, Inches(1), Inches(5.5), Inches(8), Inches(0.4),
 
 add_bottom_bar(slide)
 
-set_notes(slide, """Welcome everyone. Today I'm going to walk you through PharCovAI — a compliance intelligence product that extends Infinitus Lens to solve a critical gap in pharmaceutical patient support operations.
+set_notes(slide, """Welcome everyone. Today I'm going to walk you through PharCovAI — a compliance intelligence product that extends AI Lens to solve a critical gap in pharmaceutical patient support operations.
 
 We'll cover the problem space, the product vision, our unique advantages, the MVP scope, and a 90-day pilot plan. I'll close with a live demo of the core product surfaces.
 
@@ -292,7 +292,7 @@ add_bottom_bar(slide)
 items = [
     ("01", "The Problem", "Why pharma compliance is broken today"),
     ("02", "Product Vision", "From 5% to 100% conversation coverage"),
-    ("03", "Why Infinitus", "Our moat and market timing"),
+    ("03", "Why the Company", "Our moat and market timing"),
     ("04", "MVP Scope", "V1 features and dependency chain"),
     ("05", "Product Experience", "Core workflow and surfaces"),
     ("06", "Go-to-Market", "Onboarding, pilot plan, and success metrics"),
@@ -429,7 +429,7 @@ add_text_box(slide, Inches(1), Inches(5.0), Inches(11.3), Inches(0.5),
 paths = [
     ("Build Internally", "12-18 months", "Diverts engineering,\nno shared learnings", RED),
     ("Buy Generic", "Weeks", "Not healthcare-native,\nno PV taxonomy", ORANGE),
-    ("Extend with Infinitus", "90-day pilot", "Leverages existing moat\nfrom Day 1", GREEN),
+    ("Extend with AI Lens", "90-day pilot", "Leverages existing moat\nfrom Day 1", GREEN),
 ]
 for i, (title, timeline, gap, color) in enumerate(paths):
     x = Inches(1.5) + i * Inches(3.8)
@@ -445,7 +445,7 @@ set_notes(slide, """The pharmacovigilance market is valued at over 10 billion do
 
 But here's the important insight: no healthcare-native, AI-powered compliance intelligence platform exists today.
 
-Pharma companies face three paths: build internally, which takes 12-18 months and diverts engineering resources. Buy generic tools like Observe.AI or CallMiner, which aren't healthcare-native and lack PV taxonomy. Or extend with Infinitus — where we can leverage our existing infrastructure for a 90-day pilot.
+Pharma companies face three paths: build internally, which takes 12-18 months and diverts engineering resources. Buy generic tools like Observe.AI or CallMiner, which aren't healthcare-native and lack PV taxonomy. Or extend with the Company — where we can leverage our existing infrastructure for a 90-day pilot.
 
 The extend path is uniquely available through us because our foundational layers already exist.""")
 
@@ -496,11 +496,11 @@ Four design principles govern our trade-offs:
 4. Channel-agnostic — we analyze voice, SMS, email, and AI-agent interactions through a unified pipeline.""")
 
 
-# ── SLIDE 7: Why Infinitus, Why Now ──────────────────────────
+# ── SLIDE 7: Why Now — The Strategic Moat ──────────────────────────
 slide = add_blank_slide()
 set_slide_bg(slide, WHITE)
 add_section_number(slide, 3)
-add_slide_title(slide, "Why Infinitus, Why Now",
+add_slide_title(slide, "Why Now — The Strategic Moat",
                 "Four converging signals create a narrow window")
 add_bottom_bar(slide)
 
@@ -514,7 +514,7 @@ signals = [
     ("Regulators\nSignal Intent",
      "FDA AI/ML framework, EU AI Act high-risk classification for healthcare AI",
      RGBColor(0x7C, 0x3A, 0xED)),
-    ("Infinitus Has\nthe Infrastructure",
+    ("the Company Has\nthe Infrastructure",
      "Not a cold start — conversation processing at scale already exists",
      CYAN),
 ]
@@ -554,7 +554,7 @@ add_text_box(slide, Inches(1), Inches(6.6), Inches(11.3), Inches(0.4),
              "A competitor would need 18-24 months to replicate these advantages",
              font_size=14, bold=True, color=DARK_BLUE, alignment=PP_ALIGN.CENTER)
 
-set_notes(slide, """Why should Infinitus build this, and why now? Four signals are converging:
+set_notes(slide, """Why should the Company build this, and why now? Four signals are converging:
 
 First, AI agents are entering regulated conversations at scale. Every AI-handled interaction creates a new compliance surface without corresponding oversight.
 
@@ -562,7 +562,7 @@ Second, LLM capabilities have crossed the accuracy threshold. High-recall AE det
 
 Third, regulators are signaling intent. The FDA's evolving AI framework and the EU AI Act's high-risk classification tell us companies deploying AI in patient-facing roles will need centralized monitoring.
 
-Fourth — and this is our key advantage — Infinitus already has the infrastructure. We've processed over 100 million minutes of conversations, 7 million calls, across 1,000+ therapies. We serve 44% of the healthcare Fortune 50. This is an extension, not a greenfield build. A competitor would need 18-24 months to replicate what we already have.""")
+Fourth — and this is our key advantage — the Company already has the infrastructure. We've processed over 100 million minutes of conversations, 7 million calls, across 1,000+ therapies. We serve 44% of the healthcare Fortune 50. This is an extension, not a greenfield build. A competitor would need 18-24 months to replicate what we already have.""")
 
 
 # ── SLIDE 8: Target Users ───────────────────────────────────
@@ -900,7 +900,7 @@ for i, (name, period, start, length, color) in enumerate(tracks):
     p.font.name = "Calibri"
     p.alignment = PP_ALIGN.CENTER
 
-set_notes(slide, """The 90-day pilot is designed to validate the product with two existing Infinitus pharma customers. Each partner contributes one therapy program, voice-only for MVP, processing roughly 3,000 conversations per week with 2 PV analysts per partner.
+set_notes(slide, """The 90-day pilot is designed to validate the product with two existing the Company pharma customers. Each partner contributes one therapy program, voice-only for MVP, processing roughly 3,000 conversations per week with 2 PV analysts per partner.
 
 Four tracks run in parallel:
 - Discovery and UX runs weeks 1 through 4
@@ -1048,7 +1048,7 @@ add_rounded_rect(slide, Inches(1), Inches(6.3), Inches(11.3), Inches(0.6),
                  "No Conditional Go for safety failures.",
                  font_size=13, font_color=DARK_BLUE, bold=False)
 
-set_notes(slide, """At the end of Week 12, we hold a Go/No-Go review with Infinitus leadership and pilot partner compliance leads. Three outcomes:
+set_notes(slide, """At the end of Week 12, we hold a Go/No-Go review with the Company leadership and pilot partner compliance leads. Three outcomes:
 
 GO — if AE recall is at or above 97%, no production misses, time-to-decision under 4 minutes, and both partners commit. We convert to paid, begin V1.5 planning, and publish an internal case study.
 
@@ -1108,7 +1108,7 @@ add_text_box(slide, Inches(0.6), Inches(5.3), Inches(12.1), Inches(0.8),
 # Strategic argument
 points = [
     "Market is spending but underserved — $10B+ with no healthcare-native AI platform",
-    "Infinitus is uniquely positioned — 18-24 month head start over competitors",
+    "the Company is uniquely positioned — 18-24 month head start over competitors",
     "Window is time-bounded — first mover in AI governance becomes the default",
 ]
 for i, point in enumerate(points):
@@ -1127,7 +1127,7 @@ Q3 is expansion — launch V1.5 with SOP scoring and multi-channel support, and 
 
 Q4 is scale — launch V2 with fax and multilingual support, build the sales playbook, and establish a customer advisory board.
 
-The 24-month north star: PharCovAI becomes the system of record for AI-enabled pharmacovigilance across Infinitus's pharma customer base.
+The 24-month north star: PharCovAI becomes the system of record for AI-enabled pharmacovigilance across the Company's pharma customer base.
 
 Three things make this compelling: the market is large and underserved, we have an 18-24 month head start, and the window is time-bounded — the company that establishes the governance layer during this AI adoption wave becomes the default.""")
 
@@ -1231,7 +1231,7 @@ set_notes(slide, """Now let me switch to the live demo.
 
 I'll walk through the three product surfaces:
 
-First, the Lens Dashboard — this is the entry point into PharCovAI, integrated into the existing Infinitus Lens navigation.
+First, the Lens Dashboard — this is the entry point into PharCovAI, integrated into the existing AI Lens navigation.
 
 Second, the Triage Queue — where reviewers see AI-flagged adverse event cases sorted by severity, with confidence scores and SLA countdown timers.
 
@@ -1267,7 +1267,7 @@ add_text_box(slide, Inches(1), Inches(4.5), Inches(11), Inches(0.5),
 takeaways = [
     ("$10B+ market", "No HC-native AI\ncompliance platform"),
     ("90-day pilot", "2 partners,\nvalidated workflow"),
-    ("18-24 mo advantage", "Infinitus moat is\nreal and compounding"),
+    ("18-24 mo advantage", "the Company moat is\nreal and compounding"),
 ]
 for i, (title, desc) in enumerate(takeaways):
     x = Inches(2) + i * Inches(3.3)
@@ -1285,7 +1285,7 @@ First, this is a 10 billion dollar market with no healthcare-native AI complianc
 
 Second, we can validate the product in 90 days with 2 existing partners. The pilot plan is concrete, the metrics are defined, and the decision framework is clear.
 
-Third, Infinitus has an 18-24 month head start. Our data moat, infrastructure, customer trust, and domain expertise compound in ways that are extremely difficult to replicate.
+Third, the Company has an 18-24 month head start. Our data moat, infrastructure, customer trust, and domain expertise compound in ways that are extremely difficult to replicate.
 
 I'm looking for your input on three things: engineering feasibility, UX workflow design, and whether this strategic direction resonates. Happy to take questions.""")
 
